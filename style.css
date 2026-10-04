@@ -3,6 +3,7 @@
 }
 
 body {
+  position: relative;
   margin: 0;
   min-height: 100vh;
   display: flex;
@@ -12,9 +13,36 @@ body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #edf7ee 0%, #fefaf1 100%);
   color: #1d2c22;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+body::before {
+  width: 420px;
+  height: 420px;
+  top: -120px;
+  right: -60px;
+  background: rgba(39, 122, 81, 0.08);
+}
+
+body::after {
+  width: 340px;
+  height: 340px;
+  bottom: -120px;
+  left: -80px;
+  background: rgba(251, 191, 36, 0.08);
 }
 
 .page-shell {
+  position: relative;
+  z-index: 1;
   width: min(1100px, 100%);
   display: grid;
   grid-template-columns: 1.05fr 1fr;
@@ -24,6 +52,19 @@ body {
 
 .hero {
   padding: 20px 10px;
+}
+
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(47, 106, 77, 0.12);
+  color: #1f5e40;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .tag {
@@ -91,6 +132,7 @@ h1 {
   border: 1px solid rgba(24, 45, 34, 0.08);
   border-radius: 24px;
   box-shadow: 0 30px 60px rgba(24, 44, 31, 0.1);
+  border-top: 4px solid #2f6a4d;
 }
 
 .card-header {
