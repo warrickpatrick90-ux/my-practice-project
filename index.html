@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taxi Reservation Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Taxi Reservation </h1>
+  <form>
+    <label for="notes">Extra details (optional):</label>
+<textarea id="notes" name="notes"></textarea>
+    <label for="customerName">Your name:</label>
+<input id="customerName" name="customerName" type="text" required />
+
+<label for="phone">Phone number:</label>
+<input id="phone" name="phone" type="tel" required />
+    <label for="passengers">Number of passengers:</label>
+<select id="passengers" name="passengers" required>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select>
+    <label for="time">Pickup time:</label>
+<input id="time" name="time" type="time" required />
+  <label for="date">Pickup date:</label>
+<input id="date" name="date" type="date" required />
+    <label for="pickup">Where should the taxi pick you up?</label>
+<input id="pickup" name="pickup" type="text" required />
+  <label for="dropoff">Where should the taxi take you?</label>
+  <input id="dropoff" name="dropoff" type="text" required />
+  <button type="submit">Request taxi</button>
+</form>
+</body>
+</html>
