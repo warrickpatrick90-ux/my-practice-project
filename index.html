@@ -8,31 +8,89 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Taxi Reservation </h1>
-  <form>
-    <label for="notes">Extra details (optional):</label>
-<textarea id="notes" name="notes"></textarea>
-    <label for="customerName">Your name:</label>
-<input id="customerName" name="customerName" type="text" required />
+  <div class="page-shell">
+    <section class="hero">
+      <p class="tag">Fast • Safe • Reliable</p>
+      <h1>Book your ride in minutes</h1>
+      <p class="subtitle">
+        Need a stress-free trip around the city? Reserve your taxi and travel with comfort.
+      </p>
 
-<label for="phone">Phone number:</label>
-<input id="phone" name="phone" type="tel" required />
-    <label for="passengers">Number of passengers:</label>
-<select id="passengers" name="passengers" required>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>
-    <label for="time">Pickup time:</label>
-<input id="time" name="time" type="time" required />
-  <label for="date">Pickup date:</label>
-<input id="date" name="date" type="date" required />
-    <label for="pickup">Where should the taxi pick you up?</label>
-<input id="pickup" name="pickup" type="text" required />
-  <label for="dropoff">Where should the taxi take you?</label>
-  <input id="dropoff" name="dropoff" type="text" required />
-  <button type="submit">Request taxi</button>
-</form>
+      <div class="benefits">
+        <div>
+          <span>✔</span>
+          <p>Professional drivers</p>
+        </div>
+        <div>
+          <span>✔</span>
+          <p>On-time pickups</p>
+        </div>
+        <div>
+          <span>✔</span>
+          <p>Comfortable rides</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-card">
+      <div class="card-header">
+        <p>Taxi reservation</p>
+        <h2>Book a ride</h2>
+      </div>
+
+      <form>
+        <div class="field-group">
+          <label for="pickup">Pickup location</label>
+          <input id="pickup" name="pickup" type="text" placeholder="Enter pickup address" required />
+        </div>
+
+        <div class="field-group">
+          <label for="dropoff">Drop-off location</label>
+          <input id="dropoff" name="dropoff" type="text" placeholder="Enter destination" required />
+        </div>
+
+        <div class="row">
+          <div class="field-group">
+            <label for="date">Pickup date</label>
+            <input id="date" name="date" type="date" required />
+          </div>
+
+          <div class="field-group">
+            <label for="time">Pickup time</label>
+            <input id="time" name="time" type="time" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field-group">
+            <label for="passengers">Passengers</label>
+            <select id="passengers" name="passengers" required>
+              <option value="1">1 passenger</option>
+              <option value="2">2 passengers</option>
+              <option value="3">3 passengers</option>
+              <option value="4">4 passengers</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" placeholder="+123 456 789" required />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="customerName">Your name</label>
+          <input id="customerName" name="customerName" type="text" placeholder="Full name" required />
+        </div>
+
+        <div class="field-group">
+          <label for="notes">Extra details (optional)</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Add luggage, airport notes, or other needs"></textarea>
+        </div>
+
+        <button type="submit">Request taxi</button>
+      </form>
+    </section>
+  </div>
 </body>
 </html>
