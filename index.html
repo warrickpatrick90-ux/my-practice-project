@@ -3,51 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taxi Reservation Form</title>
+  <title>Bonaberi Taxi Booking</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
   <div class="page-shell">
-  <section class="hero">
-    <div class="hero-badge">24/7 City Taxi Service</div>
-    <p class="tag">Fast • Safe • Reliable</p>
-    <h1>Book your ride in minutes</h1>
-    <p class="subtitle">
-      Need a stress-free trip around the city? Reserve your taxi and travel with comfort.
-    </p>
+    <section class="hero">
+      <div class="hero-badge">Bonaberi • Douala</div>
+      <p class="tag">Taxi service</p>
+      <h1>Ride anywhere in Douala from Bonaberi.</h1>
+      <p class="subtitle">
+        Book a ride between Bonaberi and any part of Douala. Quick pickup, simple booking, and WhatsApp confirmation.
+      </p>
 
-    <div class="benefits">
-      <div>
-        <span>✔</span>
-        <p>Professional drivers</p>
+      <div class="benefits">
+        <div>
+          <span>✓</span>
+          <p>Local drivers</p>
+        </div>
+        <div>
+          <span>✓</span>
+          <p>Fast response</p>
+        </div>
+        <div>
+          <span>✓</span>
+          <p>WhatsApp confirmation</p>
+        </div>
       </div>
-      <div>
-        <span>✔</span>
-        <p>On-time pickups</p>
-      </div>
-      <div>
-        <span>✔</span>
-        <p>Comfortable rides</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
     <section class="form-card">
       <div class="card-header">
-        <p>Taxi reservation</p>
-        <h2>Book a ride</h2>
+        <p>Book now</p>
+        <h2>Taxi reservation</h2>
       </div>
 
       <form>
         <div class="field-group">
-          <label for="pickup">Pickup location</label>
-          <input id="pickup" name="pickup" type="text" placeholder="Enter pickup address" required />
+          <label for="city">City</label>
+          <select id="city" name="city" required>
+            <option value="">Choose city</option>
+            <option value="Douala">Douala</option>
+          </select>
         </div>
 
-        <div class="field-group">
-          <label for="dropoff">Drop-off location</label>
-          <input id="dropoff" name="dropoff" type="text" placeholder="Enter destination" required />
+        <div class="row">
+          <div class="field-group">
+            <label for="pickup">Pickup area</label>
+            <select id="pickup" name="pickup" required>
+              <option value="">Choose pickup</option>
+              <option>Bonaberi</option>
+              <option>Logpom</option>
+              <option>Akwa</option>
+              <option>Deido</option>
+              <option>New Bell</option>
+              <option>Bali</option>
+              <option>Makepe</option>
+              <option>Ndokoti</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="dropoff">Drop-off area</label>
+            <select id="dropoff" name="dropoff" required>
+              <option value="">Choose destination</option>
+              <option>Bonaberi</option>
+              <option>Logpom</option>
+              <option>Akwa</option>
+              <option>Deido</option>
+              <option>New Bell</option>
+              <option>Bali</option>
+              <option>Makepe</option>
+              <option>Ndokoti</option>
+            </select>
+          </div>
         </div>
 
         <div class="row">
@@ -75,7 +105,7 @@
 
           <div class="field-group">
             <label for="phone">Phone number</label>
-            <input id="phone" name="phone" type="tel" placeholder="+123 456 789" required />
+            <input id="phone" name="phone" type="tel" placeholder="+237 6xx xxx xxx" required />
           </div>
         </div>
 
@@ -85,11 +115,12 @@
         </div>
 
         <div class="field-group">
-          <label for="notes">Extra details (optional)</label>
-          <textarea id="notes" name="notes" rows="3" placeholder="Add luggage, airport notes, or other needs"></textarea>
+          <label for="notes">Extra details</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Luggage, airport transfer, child seat, etc."></textarea>
         </div>
 
         <button type="submit">Request taxi</button>
+        <p class="confirmation-note">You will receive your booking confirmation by WhatsApp.</p>
       </form>
     </section>
   </div>
